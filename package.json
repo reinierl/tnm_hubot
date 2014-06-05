@@ -29,7 +29,8 @@
     "soupselect": "~0.2.0",
     "htmlparser": "~1.7.7",
     "xml2js": "~0.4.4",
-    "tumblrbot": "~0.1.0"
+    "tumblrbot": "~0.1.0",
+    "nodepie": "~0.6.5"
   },
   "engines": {
     "node": ">= 0.8.x",
