@@ -31,7 +31,8 @@
     "xml2js": "~0.4.4",
     "tumblrbot": "~0.1.0",
     "nodepie": "~0.6.5",
-    "cheerio": "~0.16.0"
+    "cheerio": "~0.16.0",
+    "hubot-assembla": "0.0.1"
   },
   "engines": {
     "node": ">= 0.8.x",
