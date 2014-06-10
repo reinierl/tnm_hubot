@@ -12,5 +12,5 @@
 
 module.exports = (robot) ->
   robot.respond /buienradar/i, (msg) ->
-    msg.send "http://gratisweerdata.buienradar.nl/buienradar.php?type=256x256"
+    msg.send "http://www.buienradar.nl/images.aspx?jaar=-3&soort=sp-loop"
 
