@@ -1,17 +1,17 @@
 # Description:
-#   hubot charge network status.
+#   hubot charge network stats.
 #
 # Dependencies:
 #   None
 # 
 # Commands:
-#   hubot cnstatus - get cn status
+#   hubot cn stats me - get cn status
 # 
 # Author
 #   dbrooke
 
 module.exports = (robot) ->
-  robot.hear /cnstatus/i, (msg) ->
+  robot.hear /cn stats?(?: me)?$/i, (msg) ->
     user = "tnm";
     auth = 'Basic dG5tOmxaRzZUbElSZmNNMg==';
     msg.http("https://chargeportal.thenewmotion.com/space/tnm/online-statistics")
@@ -21,3 +21,5 @@ module.exports = (robot) ->
           when 200
             json = JSON.parse(body)
             msg.send json.total + " charge points online"
+          else
+            msg.send "Stats not available yet :)"  
