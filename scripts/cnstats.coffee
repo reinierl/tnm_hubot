@@ -19,6 +19,9 @@ module.exports = (robot) ->
         switch res.statusCode
           when 200
             json = JSON.parse(body)
-            msg.send json.total + " charge points online"
+
+            text = if (json.total < 5000) then 'Something wrong, Dave?' else if (json.total > 10000) then 'Looking good, Dave.' else 'Bit low, Dave.'
+
+            msg.send json.total + " charge points online.  " + text
           else
             msg.send "Stats not available yet :) " + res.statusCode  
