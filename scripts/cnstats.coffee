@@ -12,8 +12,7 @@
 
 module.exports = (robot) ->
   robot.hear /cn stats?(?: me)?$/i, (msg) ->
-    user = "tnm";
-    auth = 'Basic dG5tOmpoK3pJQlBlX0E=';
+    auth = process.env.HUBOT_TNM_SPACE_AUTH;
     msg.http("https://chargeportal.thenewmotion.com/space/tnm/online-statistics")
       .headers(Authorization: auth, Accept: 'application/json')
       .get() (err, res, body) ->
