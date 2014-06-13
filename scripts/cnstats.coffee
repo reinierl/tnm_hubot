@@ -39,5 +39,5 @@ message = (json, terrorism) ->
       "VICP: " + json.byTag.VICP + "\n" +
       brokenDown("by model:", json.byModel) +
       brokenDown("by protocol:", json.byProtocol) +
-      brokenDown("by IP range:", json.byProtocol)
+      brokenDown("by IP range:", json.byIPRange)
   else json.total + " charge points online.  "
