@@ -31,7 +31,8 @@ module.exports = (robot) ->
 message = (json, terrorism) ->
   if (terrorism)
     brokenDown = (title, jsonObj) ->
-      itemLines = (("    #{key}: #{value}") for key, value of jsonObj).join("\n")
+      sortedItems = ({key: k, value: v} for k, v of jsonObj).sort (a,b) -> if a.value >= b.value then -1 else 1
+      itemLines = (("    #{item.key}: #{item.value}") for item in sortedItems).join("\n")
       "#{title}\n#{itemLines}\n"
 
     "total: " + json.total + "\n" +
