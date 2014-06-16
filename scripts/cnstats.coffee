@@ -11,7 +11,7 @@
 #   dbrooke
 
 module.exports = (robot) ->
-  robot.hear /cn stats?(\s*bomb\s*)?(?: me)?$/i, (msg) ->
+  robot.hear /cn\s+stats?(\s+bomb)?(?:\s+me)?$/i, (msg) ->
     auth = process.env.HUBOT_TNM_SPACE_AUTH;
     msg.http("https://chargeportal.thenewmotion.com/space/tnm/online-statistics")
       .headers(Authorization: auth, Accept: 'application/json')
