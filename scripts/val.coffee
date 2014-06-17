@@ -6,14 +6,31 @@
 #   hal dronken val - Display a risqué Dutch sentence
 
 module.exports = (robot) ->
-  robot.hear /(dronken\s+)?val\s*$/i, (msg) ->
+  robot.hear /(dronken\s+)?val(?:\s+(.*))?$/i, (msg) ->
+    valSay = (sentence) ->
+      msg.send "Val zegt: \"" + sentence + "\""
+
     drunk = msg.match[1]?
+    query = msg.match[2]
 
     sentences = if (drunk) then drunkSentences else niceSentences
 
-    sentenceFactory = sentences[Math.floor(Math.random() * sentences.length)]
-    sentence = sentenceFactory()
-    msg.send "Val zegt: \"" + sentence + "\""
+    matchingSentences = 
+      if (query?)
+        regexQuery = new RegExp(regexEscape(query), "i")
+        sentences.filter (s) -> s().search(regexQuery) != -1
+      else sentences
+
+    if matchingSentences.length == 0
+      lcQuery = query.toLowerCase()
+      if ((dutchDays.filter (day) -> day == lcQuery).length == 1)
+        valSay "Vandaag is geen " + lcQuery
+      else
+        valSay "Ik heb nog nooit gehoord van " + query
+    else
+      sentenceFactory = matchingSentences[Math.floor(Math.random() * matchingSentences.length)]
+      sentence = sentenceFactory()
+      valSay sentence
 
 niceSentences = [
   () -> "Hee mafkees, ga eens werken!",
@@ -21,7 +38,8 @@ niceSentences = [
   () -> "Niet gezien, geen idee...",
   () -> "Alle eendjes zwemmen in het water",
   () -> "Ik hou van de Utrechtsestraat want daar gebeuren altijd bijna-ongelukken",
-  () -> "Er zit geen added value in de full potential van een SOAP-interface"]
+  () -> "Er zit geen added value in de full potential van een SOAP-interface",
+  () -> "Ik verheug me al op de turingtest!"]
 
 drunkSentences = [
   () -> "Ga eens twerken of ik tuf in je koffie!",
@@ -43,3 +61,5 @@ currentDutchPartOfDay = () ->
     "middag"
   else
     "avond"
+
+regexEscape = (str) -> str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&")
