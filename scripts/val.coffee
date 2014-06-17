@@ -6,14 +6,24 @@
 #   hal dronken val - Display a risqué Dutch sentence
 
 module.exports = (robot) ->
-  robot.hear /(dronken\s+)?val\s*$/i, (msg) ->
+  robot.hear /(dronken\s+)?val(?:\s+(.*))?$/i, (msg) ->
     drunk = msg.match[1]?
+    query = msg.match[2]
 
     sentences = if (drunk) then drunkSentences else niceSentences
 
-    sentenceFactory = sentences[Math.floor(Math.random() * sentences.length)]
-    sentence = sentenceFactory()
-    msg.send "Val zegt: \"" + sentence + "\""
+    matchingSentences = 
+      if (query?)
+        regexQuery = new RegExp(regexEscape(query), "i")
+        sentences.filter (s) -> s().search(regexQuery) != -1
+      else sentences
+
+    if matchingSentences.length == 0
+      msg.send "Val zegt: \"Ik heb nog nooit gehoord van " + query + "\""
+    else
+      sentenceFactory = matchingSentences[Math.floor(Math.random() * matchingSentences.length)]
+      sentence = sentenceFactory()
+      msg.send "Val zegt: \"" + sentence + "\""
 
 niceSentences = [
   () -> "Hee mafkees, ga eens werken!",
@@ -43,3 +53,5 @@ currentDutchPartOfDay = () ->
     "middag"
   else
     "avond"
+
+regexEscape = (str) -> str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&")
