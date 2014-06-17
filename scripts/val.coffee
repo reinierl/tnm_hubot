@@ -7,6 +7,9 @@
 
 module.exports = (robot) ->
   robot.hear /(dronken\s+)?val(?:\s+(.*))?$/i, (msg) ->
+    valSay = (sentence) ->
+      msg.send "Val zegt: \"" + sentence + "\""
+
     drunk = msg.match[1]?
     query = msg.match[2]
 
@@ -19,11 +22,15 @@ module.exports = (robot) ->
       else sentences
 
     if matchingSentences.length == 0
-      msg.send "Val zegt: \"Ik heb nog nooit gehoord van " + query + "\""
+      lcQuery = query.toLowerCase()
+      if ((dutchDays.filter (day) -> day == lcQuery).length == 1)
+        valSay "Vandaag is geen " + lcQuery
+      else
+        valSay "Ik heb nog nooit gehoord van " + query
     else
       sentenceFactory = matchingSentences[Math.floor(Math.random() * matchingSentences.length)]
       sentence = sentenceFactory()
-      msg.send "Val zegt: \"" + sentence + "\""
+      valSay sentence
 
 niceSentences = [
   () -> "Hee mafkees, ga eens werken!",
