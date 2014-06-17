@@ -13,11 +13,11 @@ module.exports = (robot) ->
 
     sentenceFactory = sentences[Math.floor(Math.random() * sentences.length)]
     sentence = sentenceFactory()
-    msg.send "Valery zegt: \"" + sentence + "\""
+    msg.send "Val zegt: \"" + sentence + "\""
 
 niceSentences = [
   () -> "Hee mafkees, ga eens werken!",
-  () -> "Het is vandaag " + currentDutchDay()]
+  () -> "Het is " + currentDutchDay() + currentDutchPartOfDay()]
 
 drunkSentences = [
   () -> "Ga eens twerken of ik tuf in je koffie!",
@@ -26,4 +26,15 @@ drunkSentences = [
 dutchDays = ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"]
 
 currentDutchDay = () -> dutchDays[(new Date).getDay()]
-    
+
+currentDutchPartOfDay = () ->
+  hour = (new Date).getHours()
+
+  if (hour < 6)
+    "nacht"
+  else if (hour < 12)
+    "morgen"
+  else if (hour < 18)
+    "middag"
+  else
+    "avond"
