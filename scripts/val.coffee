@@ -1,5 +1,5 @@
 # Description:
-#   Helpful sentences for Dutch learners
+#   Helpful sentences for Dutch learners. Can also be used as an oracle.
 #
 # Commands:
 #   hal val - Display a nice useful Dutch sentence
@@ -17,11 +17,16 @@ module.exports = (robot) ->
 
 niceSentences = [
   () -> "Hee mafkees, ga eens werken!",
-  () -> "Het is " + currentDutchDay() + currentDutchPartOfDay()]
+  () -> "Het is " + currentDutchDay() + currentDutchPartOfDay(),
+  () -> "Niet gezien, geen idee...",
+  () -> "Alle eendjes zwemmen in het water",
+  () -> "Ik hou van de Utrechtsestraat want daar gebeuren altijd bijna-ongelukken",
+  () -> "Er zit geen added value in de full potential van een SOAP-interface"]
 
 drunkSentences = [
   () -> "Ga eens twerken of ik tuf in je koffie!",
-  () -> "Als ik jullie façades hier nog eens zie, verdomde voyeurs, riskeer je zomaar geen trap voor de broek maar een vertimmerde façade"]
+  () -> "Als ik jullie façades hier nog eens zie, verdomde voyeurs, riskeer je zomaar geen trap voor de broek maar een vertimmerde façade",
+  () -> "Je moeder stinkt naar hondenkoekjes"]
 
 dutchDays = ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"]
 
