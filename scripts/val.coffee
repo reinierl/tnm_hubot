@@ -38,7 +38,8 @@ niceSentences = [
   () -> "Niet gezien, geen idee...",
   () -> "Alle eendjes zwemmen in het water",
   () -> "Ik hou van de Utrechtsestraat want daar gebeuren altijd bijna-ongelukken",
-  () -> "Er zit geen added value in de full potential van een SOAP-interface"]
+  () -> "Er zit geen added value in de full potential van een SOAP-interface",
+  () -> "Ik verheug me al op de turingtest!"]
 
 drunkSentences = [
   () -> "Ga eens twerken of ik tuf in je koffie!",
