@@ -6,7 +6,7 @@
 #   hal dronken val - Display a risqué Dutch sentence
 
 module.exports = (robot) ->
-  robot.hear /(dronken\s+)?val(?:\s+(.*))?$/i, (msg) ->
+  robot.respond /(dronken\s+)?val(?:\s+(.*))?$/i, (msg) ->
     valSay = (sentence) ->
       msg.send "Val zegt: \"" + sentence + "\""
 
