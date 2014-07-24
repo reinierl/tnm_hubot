@@ -42,7 +42,8 @@ niceSentences = [
   () -> "Ik verheug me al op de turingtest!",
   () -> "Jeetje, ik zeg wel veel...",
   () -> "Ik weet niet hoe je een oranje tompoes moet eten",
-  () -> "Welke kleuren heeft de Nederlandse vlag? Rood, wit en blauw! En soms met een oranje wimpel."]
+  () -> "Welke kleuren heeft de Nederlandse vlag? Rood, wit en blauw! En soms met een oranje wimpel.",
+  () -> "Een Limburgse vlaai hoort in acht stukken!"]
 
 drunkSentences = [
   () -> "Ga eens twerken of ik tuf in je koffie!",
