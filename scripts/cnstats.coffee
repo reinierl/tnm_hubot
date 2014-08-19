@@ -22,7 +22,7 @@ module.exports = (robot) ->
 
             datatext = message(json, msg.match[1]?)
 
-            funnytext = if (json.total < 5000) then 'Something wrong, Dave?' else if (json.total > 10000) then 'Looking good, Dave.' else 'Bit low, Dave.'
+            funnytext = if (json.total < 5000) then 'Something wrong, Dave?' else if (json.total > 11000) then 'Looking good, Dave.' else 'Bit low, Dave.'
 
             msg.send datatext + funnytext
           else
