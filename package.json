@@ -38,7 +38,8 @@
     "tumblrbot": "~0.1.0",
     "underscore": "~1.6.0",
     "underscore.string": "~2.3.3",
-    "xml2js": "~0.4.4"
+    "xml2js": "~0.4.4",
+    "hubot-jira-lookup": "git://github.com/jivesoftware/hubot-jira-lookup.git"
   },
   "engines": {
     "node": ">= 0.8.x",
