@@ -29,6 +29,7 @@
     "hubot-redis-brain": "0.0.2",
     "hubot-scripts": "~2.5.14",
     "hubot-slack": ">= 3.0.0",
+    "hubot-standup-alarm": "0.0.3",
     "hubot-urban": "^1.0.0",
     "md5": "~1.0.0",
     "nodepie": "~0.6.5",
