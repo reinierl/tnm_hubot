@@ -30,7 +30,7 @@
     "hubot-scripts": "~2.5.14",
     "hubot-sentimental": "^1.0.3",
     "hubot-slack": ">= 3.0.0",
-    "hubot-standup-alarm": "0.0.3",
+    "hubot-standup-alarm": "git://github.com/kiequoo/hubot-standup-alarm.git",
     "hubot-urban": "^1.0.0",
     "md5": "~1.0.0",
     "nodepie": "~0.6.5",
