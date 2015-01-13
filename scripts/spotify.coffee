@@ -5,19 +5,20 @@
 #   None
 #
 # Commands:
-#   hubot spotify artist <query> - query spotify for album info
+#   hubot spotify search <query> - query spotify for album info
 #
 # Author
 #   dbrooke
 
 module.exports = (robot) ->
-  robot.respond /spotify search album (.*)/i, (msg) ->
-    spotify robot, msg, msg.match[1], 'album', (resp) ->
+  robot.respond /spotify( me)? (.*)/i, (msg) ->
+    spotify robot, msg, msg.match[2], 'album', (resp) ->
       if resp.albums.items.length > 0 && resp.albums.items[0].external_urls != null
         msg.send resp.albums.items[0].external_urls.spotify
 
 spotify = (robot, msg, query, type, cb) ->
   q = q: query, type: type 
+  robot.logger.debug q
   msg.http("https://api.spotify.com/v1/search")
     .query(q)
     .get() (err, res, body) ->
