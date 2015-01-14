@@ -27,6 +27,7 @@
     "hubot-bitbucket-pr": "^0.1.1",
     "hubot-jira-lookup": "git://github.com/jivesoftware/hubot-jira-lookup.git",
     "hubot-mimic": "^0.1.1",
+    "hubot-mute": "0.0.5",
     "hubot-redis-brain": "^0.0.2",
     "hubot-scala": "git://github.com/kiequoo/hubot-scala.git",
     "hubot-scripts": "^2.5.14",
