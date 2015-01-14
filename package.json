@@ -33,6 +33,7 @@
     "hubot-scripts": "~2.5.14",
     "hubot-sentimental": "^1.0.3",
     "hubot-slack": ">= 3.0.0",
+    "hubot-spotify-search": "file:../../../../../var/folders/c1/pk1mpxss35j05s73wn0lhsd40000gn/T/npm-76384-5a6a9e15/1421226295761-0.22889899858273566/5ee7e72de7e03a3be7241cf492d0db3c7a855e0a",
     "hubot-standup-alarm": "git://github.com/kiequoo/hubot-standup-alarm.git",
     "hubot-urban": "^1.0.0",
     "md5": "~1.0.0",
