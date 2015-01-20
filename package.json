@@ -31,7 +31,6 @@
     "hubot-redis-brain": "^0.0.2",
     "hubot-scala": "git://github.com/kiequoo/hubot-scala.git",
     "hubot-scripts": "^2.5.14",
-    "hubot-sentimental": "^1.0.3",
     "hubot-slack": ">= 3.0.0",
     "hubot-spotify-search": "^1.0.0",
     "hubot-standup-alarm": "git://github.com/kiequoo/hubot-standup-alarm.git",
