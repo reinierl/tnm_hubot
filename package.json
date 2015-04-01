@@ -21,31 +21,31 @@
     "url": "https://github.com/github/hubot.git"
   },
   "dependencies": {
-    "cheerio": "~0.16.0",
+    "cheerio": "~0.19.0",
     "htmlparser": "~1.7.7",
-    "hubot": ">= 2.6.0 < 3.0.0",
-    "hubot-bitbucket-pr": "^0.1.1",
+    "hubot": ">= 2.11.4",
+    "hubot-bitbucket-pr": "^0.2.0",
     "hubot-calculator": "^0.4.0",
     "hubot-jira-lookup": "git://github.com/jivesoftware/hubot-jira-lookup.git",
     "hubot-mimic": "^0.1.1",
     "hubot-mute": "0.0.5",
     "hubot-redis-brain": "^0.0.2",
     "hubot-scala": "git://github.com/kiequoo/hubot-scala.git",
-    "hubot-scripts": "^2.5.14",
-    "hubot-slack": ">= 3.0.0",
+    "hubot-scripts": "^2.5.16",
+    "hubot-slack": ">= 3.3.0",
     "hubot-spotify-search": "^1.0.0",
     "hubot-standup-alarm": "git://github.com/kiequoo/hubot-standup-alarm.git",
     "hubot-urban": "^1.0.0",
     "md5": "~1.0.0",
-    "nodepie": "~0.6.5",
+    "nodepie": "~0.6.6",
     "soupselect": "~0.2.0",
     "tumblrbot": "~0.1.0",
-    "underscore": "~1.6.0",
-    "underscore.string": "~2.3.3",
-    "xml2js": "~0.4.4"
+    "underscore": "~1.8.2",
+    "underscore.string": "~3.0.3",
+    "xml2js": "~0.4.6"
   },
   "engines": {
-    "node": ">= 0.8.x",
-    "npm": ">= 1.1.x"
+    "node": "0.10.x",
+    "npm": "2.5.1"
   }
 }
