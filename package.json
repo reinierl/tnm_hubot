@@ -25,6 +25,7 @@
     "htmlparser": "~1.7.7",
     "hubot": ">= 2.6.0 < 3.0.0",
     "hubot-bitbucket-pr": "^0.1.1",
+    "hubot-calculator": "^0.4.0",
     "hubot-jira-lookup": "git://github.com/jivesoftware/hubot-jira-lookup.git",
     "hubot-mimic": "^0.1.1",
     "hubot-mute": "0.0.5",
