@@ -14,7 +14,7 @@ module.exports = (robot) ->
   robot.respond /query( me)? (.*)/i, (msg) ->
     rijksMe msg, msg.match[2], (resp) ->
       json_tb = require('json-table')
-      json_tb_out = new json_tb resp, {}, (table) ->
+      json_tb_out = new json_tb resp, { style: head: [], border: []}, (table) ->
         msg.send "```\n" + table.table.toString() + "\n```"
 
 rijksMe = (msg, query, cb) ->
