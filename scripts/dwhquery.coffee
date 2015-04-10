@@ -18,7 +18,7 @@ module.exports = (robot) ->
         msg.send "```\n" + table.table.toString() + "\n```"
 
 rijksMe = (msg, query, cb) ->
-  q = token: 'eX0wA0bLes5Eks5It3onk3Yar8wat9Ew3Irc6awV8I8On0ew1y', q: query
+  q = token: process.env.IMPALA_API_TOKEN, q: query
 
   msg.http("http://impala-api.docker.thenewmotion.com/impala")
     .query(q)
