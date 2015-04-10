@@ -26,7 +26,7 @@
     "hubot": ">= 2.11.4",
     "hubot-bitbucket-pr": "^0.2.0",
     "hubot-calculator": "^0.4.0",
-    "hubot-jira-lookup": "git@github.com:kiequoo/hubot-jira-lookup.git",
+    "hubot-jira-lookup": "git://github.com/kiequoo/hubot-jira-lookup.git",
     "hubot-mimic": "^0.1.1",
     "hubot-mute": "0.0.5",
     "hubot-redis-brain": "^0.0.2",
