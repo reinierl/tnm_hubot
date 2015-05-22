@@ -32,7 +32,7 @@ module.exports = (robot) ->
       	msg.send result
 
 rijksMe = (msg, query, cb) ->
-  q = key: process.env.HUBOT_RIJKS_KEY, format: 'json', q: query.replace /;$/g, ""
+  q = key: process.env.HUBOT_RIJKS_KEY, format: 'json', q: query
 
   msg.http("https://www.rijksmuseum.nl/api/en/collection")
     .query(q)
