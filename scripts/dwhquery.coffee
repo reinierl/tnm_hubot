@@ -20,7 +20,7 @@ module.exports = (robot) ->
 queryMe = (msg, query, cb) ->
   q = token: process.env.IMPALA_API_TOKEN, q: query.replace /;$/g, ""
 
-  msg.http("http://impala-api.docker.thenewmotion.com/impala")
+  msg.http("http://impala-api.thenewmotion.org/impala")
     .query(q)
     .get() (err, res, body) ->
       if err
