@@ -32,7 +32,7 @@
     "hubot-mute": "0.0.5",
     "hubot-redis-brain": "^0.0.2",
     "hubot-scala": "git://github.com/kiequoo/hubot-scala.git",
-    "hubot-scripts": "^2.5.16",
+    "hubot-scripts": "^2.16.1",
     "hubot-slack": ">= 3.3.0",
     "hubot-slack-attachment": "^1.0.1",
     "hubot-spotify-search": "^1.0.0",
