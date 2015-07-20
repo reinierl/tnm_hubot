@@ -27,6 +27,7 @@
     "hubot-bitbucket-pr": "^0.2.0",
     "hubot-calculator": "^0.4.0",
     "hubot-google-images": "^0.1.4",
+    "hubot-grafana": "^1.4.0",
     "hubot-jira-lookup": "git://github.com/kiequoo/hubot-jira-lookup.git",
     "hubot-mimic": "^0.1.1",
     "hubot-mute": "0.0.5",
