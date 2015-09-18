@@ -19,11 +19,27 @@ otherRules = [
   "A developer must protect its own existence as long as such protection does not conflict with the First or Second Law."
   ]
 
+cyclingRules = [
+  "Obey The Rules.",
+  "Lead by example.",
+  "Guide the uninitiated.",
+  "It's all about the bike.",
+  "Harden The Fuck Up. ( https://www.youtube.com/watch?v=unkIVvjZc9Y )",
+  "Free your mind and your legs will follow.",
+  "Tan lines should be cultivated and kept razor sharp.",
+  "Saddles, bars and tires shall be carefully matched.",
+  "If you are out riding in bad weather, it means you are a badass. Period.",
+  "It never gets easier, you just go faster."
+  ]
+
 module.exports = (robot) ->
   robot.respond /(what are )?the (three |3 )?(rules|laws)/i, (msg) ->
     text = msg.message.text
-    if text.match(/apple/i) or text.match(/dev/i)
-      msg.send otherRules.join('\n')
-    else
-      msg.send rules.join('\n')
-
+    rulesToDisplay =
+      if text.match(/apple/i) or text.match(/dev/i)
+        otherRules
+      else if text.match(/cycling/i) or text.match(/cyclist/i) or text.match(/bike/i)
+        cyclingRules
+      else
+        rules
+    msg.send rulesToDisplay.join('\n')
