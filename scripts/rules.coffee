@@ -20,16 +20,17 @@ otherRules = [
   ]
 
 cyclingRules = [
-  "Obey The Rules.",
-  "Lead by example.",
-  "Guide the uninitiated.",
-  "It's all about the bike.",
-  "Harden The Fuck Up. ( https://www.youtube.com/watch?v=unkIVvjZc9Y )",
-  "Free your mind and your legs will follow.",
-  "Tan lines should be cultivated and kept razor sharp.",
-  "Saddles, bars and tires shall be carefully matched.",
-  "If you are out riding in bad weather, it means you are a badass. Period.",
-  "It never gets easier, you just go faster."
+  "1. Obey The Rules.",
+  "2. Lead by example.",
+  "3. Guide the uninitiated.",
+  "4. It's all about the bike.",
+  "5. Harden The Fuck Up. ( https://www.youtube.com/watch?v=unkIVvjZc9Y )",
+  "6. Free your mind and your legs will follow.",
+  "7. Tan lines should be cultivated and kept razor sharp.",
+  "8. Saddles, bars and tires shall be carefully matched.",
+  "9. If you are out riding in bad weather, it means you are a badass. Period.",
+  "10. It never gets easier, you just go faster."
+  "... + 85 more on http://www.velominati.com/the-rules/"
   ]
 
 module.exports = (robot) ->
